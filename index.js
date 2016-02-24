@@ -4,7 +4,7 @@ var cors = require('cors');
 var config = require('histograph-config');
 var schemas = require('histograph-schemas');
 var io = require('histograph-io');
-var stats = require('histograph-stats');
+// var stats = require('histograph-stats');
 var app = express();
 var query = require('./lib/query');
 var jsonld = require('./lib/jsonld');
@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/', io);
 
 // Mount Histograph Stats
-app.use('/stats', stats);
+// app.use('/stats', stats);
 
 var ontology;
 schemas.ontology(function(err, results) {
